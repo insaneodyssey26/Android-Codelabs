@@ -5,10 +5,15 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -20,10 +25,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CodelabsTheme {
-                GoodLuck(
-                    message = "Good Luck Saheli for your future",
-                    from  = "From Masum",
-                )
+                Surface (
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    GoodLuck(
+                        message = "Good Luck Saheli for your future",
+                        from = "From Masum",
+                    )
+                }
             }
         }
     }
@@ -37,11 +47,13 @@ fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
             fontSize = 60.sp,
             lineHeight = 100.sp,
             modifier = modifier.padding(67.dp),
+            textAlign = TextAlign.Center,
         )
         Text(
             text = from,
             fontSize = 30.sp,
-            modifier = modifier.padding(80.dp)
+            modifier = modifier.padding(20.dp)
+                .align(Alignment.End),
         )
     }
 }
@@ -49,6 +61,6 @@ fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
 @Composable
 fun GoodLuckPreview() {
     CodelabsTheme {
-        GoodLuck(message = "Good Luck Saheli for your future", from  = "From Masum")
+        GoodLuck(message = "Good Luck Saheli for your future", from = "From Masum")
     }
 }
