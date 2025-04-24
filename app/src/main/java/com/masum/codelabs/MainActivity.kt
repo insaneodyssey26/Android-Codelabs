@@ -64,3 +64,7 @@ fun GoodLuckPreview() {
         GoodLuck(message = "Good Luck Saheli for your future", from = "From Masum")
     }
 }
+
+@Composable
+fun GoodLuckImage(message: String, from: String, modifier: Modifier = Modifier) {
+}
