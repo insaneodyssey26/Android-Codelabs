@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
     Column{
-        val image = painterResource(R.drawable.usghibli)
+        val image = painterResource(R.drawable.usghibli)  // Image resource ekhane use hoyeche
         Image(
             painter = image,
             contentDescription = null,
