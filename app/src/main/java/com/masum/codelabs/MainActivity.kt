@@ -46,11 +46,11 @@ class MainActivity : ComponentActivity() {
 fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
     Column{
         val image = painterResource(R.drawable.usghibli)  // Image resource ekhane use hoyeche
-        Image(
-            painter = image,
-            contentDescription = null,
-           modifier = Modifier.align(Alignment.CenterHorizontally)
-        )
+//        Image(
+//            painter = image,
+//            contentDescription = null,
+//           modifier = Modifier.align(Alignment.CenterHorizontally)
+//        )
         Text(
             text = message,
             fontSize = 60.sp,
@@ -80,7 +80,7 @@ fun GoodLuckPreview() {
 @Composable
 fun GoodLuckImage(message: String, from: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.usghibli)
-    Box (modifier){
+    Box (modifier = modifier.fillMaxSize()) {
         Image(
             modifier = modifier.fillMaxSize(),
             painter = image,
@@ -89,8 +89,8 @@ fun GoodLuckImage(message: String, from: String, modifier: Modifier = Modifier) 
         GoodLuck(
             message = message,
             from = from,
-            modifier = Modifier
-                .fillMaxSize()
+            modifier = Modifier.align(Alignment.Center)
+               // .fillMaxSize()
         )
     }
 }
