@@ -58,17 +58,19 @@ fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
             text = message,
             fontSize = 60.sp,
             lineHeight = 100.sp,
+            color = Color.Green,
             modifier = Modifier
                 .padding(67.dp)
-                .background(Color.Green)
+                //.background(Color.Green)
         //    textAlign = TextAlign.Center,
         )
         Text(
             text = from,
             fontSize = 30.sp,
+            color = Color.Cyan,
             modifier = Modifier.padding(20.dp)
                 .align(Alignment.End)
-                .background(Color.Cyan)
+                // .background(Color.Cyan)
             )
     }
 }
