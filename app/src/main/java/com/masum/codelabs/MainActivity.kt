@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -48,14 +49,14 @@ fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
         Image(
             painter = image,
             contentDescription = null,
-            modifier = Modifier.align(Alignment.CenterHorizontally)
+           modifier = Modifier.align(Alignment.CenterHorizontally)
         )
         Text(
             text = message,
             fontSize = 60.sp,
             lineHeight = 100.sp,
             modifier = Modifier.padding(67.dp),
-            textAlign = TextAlign.Center,
+        //    textAlign = TextAlign.Center,
         )
         Text(
             text = from,
@@ -79,9 +80,17 @@ fun GoodLuckPreview() {
 @Composable
 fun GoodLuckImage(message: String, from: String, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.usghibli)
-    Image(
-        modifier = modifier.fillMaxSize(),
-        painter = image,
-        contentDescription = null,
-    )
+    Box (modifier){
+        Image(
+            modifier = modifier.fillMaxSize(),
+            painter = image,
+            contentDescription = null,
+        )
+        GoodLuck(
+            message = message,
+            from = from,
+            modifier = Modifier
+                .fillMaxSize()
+        )
+    }
 }
