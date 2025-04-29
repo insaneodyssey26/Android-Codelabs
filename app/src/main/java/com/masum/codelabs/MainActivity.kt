@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -57,8 +58,9 @@ fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
         Text(
             text = message,
             fontSize = 60.sp,
+            fontWeight = FontWeight.SemiBold,
             lineHeight = 100.sp,
-            color = Color.Green,
+            //color = Color.Green,
             modifier = Modifier
                 .padding(67.dp)
                 //.background(Color.Green)
@@ -67,7 +69,8 @@ fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
         Text(
             text = from,
             fontSize = 30.sp,
-            color = Color.Cyan,
+            fontWeight = FontWeight.SemiBold,
+            //color = Color.Cyan,
             modifier = Modifier.padding(20.dp)
                 .align(Alignment.End)
                 // .background(Color.Cyan)
