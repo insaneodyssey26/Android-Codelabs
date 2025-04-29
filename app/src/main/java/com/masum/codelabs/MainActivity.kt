@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     GoodLuckImage(
                         message = "Good Luck Saheli for your future",
-                        from = "From Masum",
+                        from = "God, hope you fulfil our dreams",
                     )
                 }
             }
@@ -47,32 +47,48 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun GoodLuck (message: String, from: String, modifier: Modifier = Modifier) {
-    Column{
-        val image = painterResource(R.drawable.usghibli)  // Image resource ekhane use hoyeche
+fun GoodLuck (message: String, from: String,modifier: Modifier = Modifier) {
+    Box(modifier = Modifier.fillMaxSize()){
+        Column (
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+        ) {
+            Text(
+                text = message,
+                fontSize = 50.sp,
+                fontWeight = FontWeight.SemiBold,
+                lineHeight = 100.sp,
+                //color = Color.Green,
+                modifier = Modifier
+                    .padding(67.dp)
+                //.background(Color.Green)
+                //    textAlign = TextAlign.Center,
+            )
+            Text(
+                text = "I love you and will do my best to make you happy and proud. If God permits, I will be with you forever. We will marry, live together, and travel the world. I dream of watching cherry blossoms with you.",
+                fontSize = 20.sp,
+                    fontWeight = FontWeight.SemiBold,
+                lineHeight = 30.sp,
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .padding(20.dp)
+                )
+        }
+       // val image = painterResource(R.drawable.usghibli)  // Image resource ekhane use hoyeche
 //        Image(
 //            painter = image,
 //            contentDescription = null,
 //           modifier = Modifier.align(Alignment.CenterHorizontally)
 //        )
-        Text(
-            text = message,
-            fontSize = 60.sp,
-            fontWeight = FontWeight.SemiBold,
-            lineHeight = 100.sp,
-            //color = Color.Green,
-            modifier = Modifier
-                .padding(67.dp)
-                //.background(Color.Green)
-        //    textAlign = TextAlign.Center,
-        )
+
+
         Text(
             text = from,
-            fontSize = 30.sp,
+            fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
             //color = Color.Cyan,
             modifier = Modifier.padding(20.dp)
-                .align(Alignment.End)
+                .align(Alignment.BottomCenter)
                 // .background(Color.Cyan)
             )
     }
