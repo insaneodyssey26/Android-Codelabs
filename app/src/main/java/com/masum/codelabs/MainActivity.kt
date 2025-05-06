@@ -20,7 +20,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -58,11 +57,8 @@ fun GoodLuck (message: String, from: String,modifier: Modifier = Modifier) {
                 fontSize = 50.sp,
                 fontWeight = FontWeight.SemiBold,
                 lineHeight = 100.sp,
-                //color = Color.Green,
                 modifier = Modifier
                     .padding(67.dp)
-                //.background(Color.Green)
-                //    textAlign = TextAlign.Center,
             )
             Text(
                 text = "I love you and will do my best to make you happy and proud. If God permits, I will be with you forever. We will marry, live together, and travel the world. I dream of watching cherry blossoms with you.",
@@ -74,22 +70,12 @@ fun GoodLuck (message: String, from: String,modifier: Modifier = Modifier) {
                         .padding(20.dp)
                 )
         }
-       // val image = painterResource(R.drawable.usghibli)  // Image resource ekhane use hoyeche
-//        Image(
-//            painter = image,
-//            contentDescription = null,
-//           modifier = Modifier.align(Alignment.CenterHorizontally)
-//        )
-
-
         Text(
             text = from,
             fontSize = 15.sp,
             fontWeight = FontWeight.SemiBold,
-            //color = Color.Cyan,
             modifier = Modifier.padding(20.dp)
                 .align(Alignment.BottomCenter)
-                // .background(Color.Cyan)
             )
     }
 }
@@ -119,7 +105,6 @@ fun GoodLuckImage(message: String, from: String, modifier: Modifier = Modifier) 
             message = message,
             from = from,
             modifier = Modifier.align(Alignment.Center)
-               // .fillMaxSize()
         )
     }
 }
