@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     GoodLuckImage(
                         message = stringResource(R.string.good_luck_text),
-                        from = "God, hope you fulfil our dreams",
+                        from = stringResource(R.string.from_text),
                     )
                 }
             }
@@ -85,7 +85,7 @@ fun GoodLuck (message: String, from: String) {
 fun GoodLuckPreview() {
     CodelabsTheme {
         GoodLuckImage(
-            message = "Good Luck Saheli for your future",
+            message = stringResource(R.string.good_luck_text),
             from = "From Masum"
         )
     }
