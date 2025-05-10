@@ -60,7 +60,7 @@ fun GoodLuck (message: String, from: String) {
                     .padding(67.dp)
             )
             Text(
-                text = "I love you and will do my best to make you happy and proud. If God permits, I will be with you forever. We will marry, live together, and travel the world. I dream of watching cherry blossoms with you.",
+                text = stringResource(R.string.message_text),
                 fontSize = 20.sp,
                     fontWeight = FontWeight.SemiBold,
                 lineHeight = 30.sp,
@@ -86,7 +86,7 @@ fun GoodLuckPreview() {
     CodelabsTheme {
         GoodLuckImage(
             message = stringResource(R.string.good_luck_text),
-            from = "From Masum"
+            from = stringResource(R.string.from_text)
         )
     }
 }
